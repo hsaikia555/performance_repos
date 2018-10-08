@@ -52,6 +52,9 @@ def create_connection(sessions):
                     print(request)
                     requestJson=json.loads(request)
                     print(requestJson)
+                    requestJson['fileSystemUri'] = cof.FILE_SYSTEM_URI
+                    requestJson['connectionInstanceName'] = 'HDFS_Connection_'+time.strftime('%Y%m%d%H%M%S')
+                    print(requestJson)
                     response=sessions.post(URL,json=requestJson)
                     print(response.text)
                     if int(response.json()['status']['responseCode']) == 200:
