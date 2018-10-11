@@ -46,6 +46,8 @@ def createWorkflow(session,entityTypeId,version,entityName,connection_id):
                             for j in range(len(stepParamList_list)):
                                 if stepParamList_list[j]['key']=='destinationPath':
                                     stepParamList_list[j]['valueText'] = cof.WF_BASE_PATH+'SOAK_UTF_data_Path_automation_'+timestamp
+                                if stepParamList_list[j]['key']=='extraJobConfig':
+                                    stepParamList_list[j]['valueText'] = 'hdp.version:'+cof.hdp_version_for_UTF
 
                         if stepList_list[i]['stepName']=='File Move':
                             stepParamList_list=stepList_list[i]['stepParamList']
