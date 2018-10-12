@@ -37,11 +37,12 @@ def createLZDir(session,serverId):
                     print(requestJson)
                     URL=cof.PROTOCOL+"://"+cof.HOST+":"+cof.PORT+"/bedrock-app/services/rest/ingestion/saveLZDirectories"
                     print(URL)
-                    print(requestJson['dirPath'])
+                    lzDirPath=requestJson['dirPath']
+                    print(lzDirPath)
                     response=session.post(URL,json=requestJson)
                     print(response.text)
                     lzDirId=response.json()['status']['result']
-        return lzDirId
+        return lzDirId,lzDirPath
     except Exception as e:
         print("Some Exception has been found:",e)
 

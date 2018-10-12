@@ -1,7 +1,7 @@
 import json
 import time
 import csv
-import  config as cof
+import config as cof
 
 
 

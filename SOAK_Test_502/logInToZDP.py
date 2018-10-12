@@ -1,14 +1,16 @@
 import requests
 import json
-import config
+import config as cof
 import time
+
+
 def logIn():
     try:
 
         session=requests.session()
-        URL=config.PROTOCOL+"://"+config.HOST+":"+config.PORT+"/bedrock-app/services/rest/login"
+        URL=cof.PROTOCOL+"://"+cof.HOST+":"+cof.PORT+"/bedrock-app/services/rest/login"
         print(URL)
-        requestJson={"username": config.USERNAME,"password": config.PASSWORD}
+        requestJson={"username": cof.USERNAME,"password": cof.PASSWORD}
         print(requestJson)
         response=session.post(URL,json=requestJson)
         print(response.text)
@@ -22,12 +24,5 @@ def logIn():
     except Exception as e:
         print("Some Exception has been found:",e)
 
-
-
-
-
-
-#test1=time.strftime('%Y%m%d%H%M%S')
-#print(test1)
 
 

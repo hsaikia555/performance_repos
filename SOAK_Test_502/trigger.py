@@ -1,4 +1,3 @@
-import config
 import createEntity
 import logInToZDP
 import createWorkflow
@@ -6,7 +5,8 @@ import createLZDirectory
 import fetchConnections
 import createFilePattern
 import createDQRule
-
+import time
+import SOAK_Test_502.remoteConnection
 print("Log into ZDP...")
 session=logInToZDP.logIn()
 print("Create DQ Rule....")
@@ -30,10 +30,15 @@ serverId=createLZDirectory.fetchLZServers(session)
 print("LZ Server ID:  ",serverId)
 print("---------------------------------------")
 print("Create LZ directory.....")
-lzDirId=createLZDirectory.createLZDir(session,serverId)
+lzDirId,lzDirPath=createLZDirectory.createLZDir(session,serverId)
 print("LZ directory ID:  ",lzDirId)
+print("LZ direcotry created: ",lzDirPath)
 print("--------------------------------------")
 print("Create File Pattern......")
 filePatternId=createFilePattern.createFilePattern(session,lzDirId,wfId,connection_id)
 print("File pattern ID:  ",filePatternId)
 print("---------------------------------------")
+print("Sleeping for 10 seconds........")
+time.sleep(10)
+print("Trigger remote file droop script.....")
+SOAK_Test_502.remoteConnection.remoteConnection(lzDirPath)
