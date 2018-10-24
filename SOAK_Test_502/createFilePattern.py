@@ -1,5 +1,5 @@
 import json
-import config as cof
+import SOAK_Test_502.config as cof
 import time
 import csv
 def createFilePattern(session,lzDirId,wfId,connection_id):

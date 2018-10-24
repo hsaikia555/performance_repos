@@ -1,6 +1,6 @@
 import json
 import time
-import config as cof
+import SOAK_Test_502.config as cof
 import csv
 
 
