@@ -1,0 +1,44 @@
+DEBUG 2018-10-24 12:54:18,878 - Starting new HTTP connection (1): 10.11.13.54:8080
+DEBUG 2018-10-24 12:54:19,732 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/login HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:19,732 - Opening the Input CSV File for CreteDQRule
+DEBUG 2018-10-24 12:54:19,748 - request:{"ruleName":"Not_Null_123","ruleDesc":null,"failureMessage":"","failureErrorCode":"","ruleTag":"","effectiveDate":"","terminationDate":"","dateFormat":"yyyy-MM-dd HH:mm:ss","ruleStatus":"ACTIVE","invertFunction":0,"parameterValue":null,"Variables":[{"name":"primaryVar","type":"STRING","isPrimary":true}],"ruleExpression":"{NOT_NULL(primaryVar)}","ruleExpressionJson":{"group":{"firstGroup":true,"rules":[{"data":"NOT_NULL(primaryVar)"}],"operator":"AND"}}}
+DEBUG 2018-10-24 12:54:19,748 - Request Json:
+DEBUG 2018-10-24 12:54:19,748 - URL:http://10.11.13.54:8080/bedrock-app/services/rest/dq/rules/add
+DEBUG 2018-10-24 12:54:20,470 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/dq/rules/add HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:20,470 - Response message:
+DEBUG 2018-10-24 12:54:20,470 - Rule ID :5
+DEBUG 2018-10-24 12:54:28,986 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/projects/1/entities HTTP/1.1" 201 None
+DEBUG 2018-10-24 12:54:29,423 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/ingestion/filesystems/connections/search HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:29,767 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/ingestion/filesystems/2/connections HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:31,111 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/projects/1/workflows HTTP/1.1" 201 None
+DEBUG 2018-10-24 12:54:31,486 - http://10.11.13.54:8080 "GET /bedrock-app/services/rest/ingestion/publish/retrieveLandingZoneServers HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:32,439 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/ingestion/saveLZDirectories HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:32,986 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/projects/1/filePatterns HTTP/1.1" 200 None
+DEBUG 2018-10-24 12:54:43,251 - starting thread (client mode): 0x387e810
+DEBUG 2018-10-24 12:54:43,251 - Local version/idstring: SSH-2.0-paramiko_2.4.2
+DEBUG 2018-10-24 12:54:43,517 - Remote version/idstring: SSH-2.0-OpenSSH_5.3
+INFO 2018-10-24 12:54:43,517 - Connected (version 2.0, client OpenSSH_5.3)
+DEBUG 2018-10-24 12:54:43,782 - kex algos:['diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ssh-dss'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG 2018-10-24 12:54:43,782 - Kex agreed: diffie-hellman-group-exchange-sha256
+DEBUG 2018-10-24 12:54:43,782 - HostKey agreed: ssh-rsa
+DEBUG 2018-10-24 12:54:43,782 - Cipher agreed: aes128-ctr
+DEBUG 2018-10-24 12:54:43,782 - MAC agreed: hmac-sha2-256
+DEBUG 2018-10-24 12:54:43,782 - Compression agreed: none
+DEBUG 2018-10-24 12:54:44,049 - Got server p (2048 bits)
+DEBUG 2018-10-24 12:54:45,564 - kex engine KexGexSHA256 specified hash_algo <built-in function openssl_sha256>
+DEBUG 2018-10-24 12:54:45,579 - Switch to new keys ...
+DEBUG 2018-10-24 12:54:45,579 - Adding ssh-rsa host key for 10.11.13.54: b'409f1ce0d37fcdbe52c20d6a67f6aba7'
+DEBUG 2018-10-24 12:54:46,142 - userauth is OK
+INFO 2018-10-24 12:54:46,752 - Authentication (password) successful!
+DEBUG 2018-10-24 12:54:46,752 - [chan 0] Max packet in: 32768 bytes
+DEBUG 2018-10-24 12:54:47,033 - [chan 0] Max packet out: 32768 bytes
+DEBUG 2018-10-24 12:54:47,033 - Secsh channel 0 opened.
+DEBUG 2018-10-24 12:54:47,314 - [chan 0] Sesch channel 0 request ok
+DEBUG 2018-10-24 12:54:50,596 - [chan 0] EOF received (0)
+DEBUG 2018-10-24 12:54:50,596 - [chan 1] Max packet in: 32768 bytes
+DEBUG 2018-10-24 12:54:50,596 - [chan 0] EOF sent (0)
+DEBUG 2018-10-24 12:54:50,877 - [chan 1] Max packet out: 32768 bytes
+DEBUG 2018-10-24 12:54:50,877 - Secsh channel 1 opened.
+DEBUG 2018-10-24 12:54:51,487 - [chan 1] Sesch channel 1 request ok
+DEBUG 2018-10-24 12:54:53,720 - [chan 1] EOF received (1)
+DEBUG 2018-10-24 12:54:53,720 - EOF in transport thread
