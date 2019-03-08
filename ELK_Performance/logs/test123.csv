@@ -1,0 +1,15 @@
+DEBUG 2019-03-07 20:32:26,292 - Starting new HTTP connection (1): 10.11.13.54:8080
+DEBUG 2019-03-07 20:32:27,137 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/login HTTP/1.1" 200 None
+DEBUG 2019-03-07 20:32:27,137 - Opening the Input CSV File for CreteDQRule
+DEBUG 2019-03-07 20:32:27,137 - request:{"ruleName":"Not_Null_123","ruleDesc":null,"failureMessage":"","failureErrorCode":"","ruleTag":"","effectiveDate":"","terminationDate":"","dateFormat":"yyyy-MM-dd HH:mm:ss","ruleStatus":"ACTIVE","invertFunction":0,"parameterValue":null,"Variables":[{"name":"primaryVar","type":"STRING","isPrimary":true}],"ruleExpression":"{NOT_NULL(primaryVar)}","ruleExpressionJson":{"group":{"firstGroup":true,"rules":[{"data":"NOT_NULL(primaryVar)"}],"operator":"AND"}}}
+DEBUG 2019-03-07 20:32:27,137 - Request Json:
+DEBUG 2019-03-07 20:32:27,137 - URL:http://10.11.13.54:8080/bedrock-app/services/rest/dq/rules/add
+DEBUG 2019-03-07 20:32:27,622 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/dq/rules/add HTTP/1.1" 200 None
+DEBUG 2019-03-07 20:32:27,637 - Response message:
+DEBUG 2019-03-07 20:32:27,637 - Rule ID :10
+DEBUG 2019-03-07 20:32:30,934 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/projects/1/entities HTTP/1.1" 201 None
+DEBUG 2019-03-07 20:32:31,262 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/ingestion/filesystems/connections/search HTTP/1.1" 200 None
+DEBUG 2019-03-07 20:32:33,184 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/projects/1/workflows HTTP/1.1" 201 None
+DEBUG 2019-03-07 20:32:33,512 - http://10.11.13.54:8080 "GET /bedrock-app/services/rest/ingestion/publish/retrieveLandingZoneServers HTTP/1.1" 200 None
+DEBUG 2019-03-07 20:32:34,293 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/ingestion/saveLZDirectories HTTP/1.1" 200 None
+DEBUG 2019-03-07 20:32:34,700 - http://10.11.13.54:8080 "POST /bedrock-app/services/rest/projects/1/filePatterns HTTP/1.1" 200 None
