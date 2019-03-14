@@ -1,0 +1,2 @@
+from third_party.metricbeat.install_configure_metricbeat import metricbeat
+metricbeat()

@@ -1,0 +1,5 @@
+metricbeat_nodes:
+  - 10.11.13.55
+
+elastic_index: "performance_poc"
+elastic_url: "192.168.2.63:6775"

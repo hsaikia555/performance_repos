@@ -1,0 +1,22 @@
+metricbeat.modules:
+- enabled: true
+  metricsets:
+  - cpu
+  - load
+  - core
+  - diskio
+  - filesystem
+  - fsstat
+  - memory
+  - network
+  - process
+  module: system
+  period: 10s
+  processes:
+  - .*
+output.elasticsearch:
+  hosts:
+  - 192.168.2.63:6775
+  index: performance_poc-%{+yyyy.MM.dd}
+setup.template.name: performance_poc
+setup.template.pattern: performance_poc-*
