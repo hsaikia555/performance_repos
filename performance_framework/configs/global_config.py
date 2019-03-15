@@ -1,0 +1,7 @@
+PROTOCOL = "http"
+HOST = "10.1.3.48"
+PORT = "8080"
+PROJECT_ID = "1"
+TARGET_SCHEMA = "zdp_51_provision"
+USER_NAME = "admin"
+PASSWORD = "admin"
