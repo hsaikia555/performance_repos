@@ -6,9 +6,8 @@ import test_repo.performance_framework.core.Application.Authentication.authentic
 import test_repo.performance_framework.engine.execute_workflow.execute_workflow as execute_workflow
 import test_repo.performance_framework.tests.test_controller as controller
 
-
+#  execute multiple UTF workflow:
 session = auth.log_in()
-#Create multiple UTF workflow:
 workflow_execution_frequency = controller.WORKFLOW_EXECUTION_FREQUENCY
 workflow_id = controller.WORKFLOW_ID
 workflow_name = controller.WORKFLOW_NAME
